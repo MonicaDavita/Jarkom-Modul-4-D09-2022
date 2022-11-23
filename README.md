@@ -1,0 +1,359 @@
+# Jarkom-Modul-4-D09-2022
+
+## Anggota Kelompok D09
+| No | Nama | NRP |
+| ------ | ------ | ----- |
+| 1 | Monica Narda Davita | 5025201009 |
+| 2 | Alya Shofarizqi Inayah | 5025201113 |
+| 3 | Meisya Salsabila Indrijo Putri | 5025201114 |
+
+## CIDR GNS3
+### Topologi GNS3
+![topologiCIDR]()
+
+### Topologi Cluster GNS3
+![topologiA]()
+![topologiB]()
+![topologiC]()
+![topologiD]()
+![topologiE]()
+![topologiF]()
+![topologiG]()
+![topologiH]()
+
+Dari pengelompokan subnet tersebut didapatkan subnet terbesar memiliki 16 bit, sehingga pohon pembagian IP dapat dibuat menjadi sebagai berikut:
+
+### Pohon IP CIDR
+![pohonIPCIDR]()
+
+Setelah didapatkan IP pada setiap subnet paling bawah, maka dicari netmask dan broadcast pada setiap subnet tersebut. Hasilnya sebagai berikut:
+
+### Tabel Netmask dan Broadcast ID
+![NetmaskBroadcastCIDR]()
+
+### CIDR Routing - Setting Network Configuration
+![NetworkConfigurationCIDR]()
+**Konfigurasi: The Resonance**\
+```bash
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+      address 192.189.32.1
+      netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+      address 192.189.146.1
+      netmask 255.255.255.252
+
+auto eth3
+iface eth3 inet static
+      address 192.189.160.1
+      netmask 255.255.255.252
+
+auto eth4
+iface eth4 inet static
+      address 192.189.64.1
+      netmask 255.255.255.252
+```
+**Konfigurasi: The Order**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.32.2
+      netmask 255.255.255.252
+      gateway 192.189.32.1
+
+auto eth1
+iface eth1 inet static
+      address 192.189.8.1
+      netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+      address 192.189.16.1
+      netmask 255.255.255.192
+```
+
+**Konfigurasi: The Minister**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.8.2
+      netmask 255.255.255.252
+      gateway 192.189.8.1
+
+auto eth1
+iface eth1 inet static
+      address 192.189.4.1
+      netmask 255.255.252.0
+
+auto eth2
+iface eth2 inet static
+      address 192.189.2.1
+      netmask 255.255.255.252
+```
+**Konfigurasi: The Dauntless**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.2.2
+      netmask 255.255.255.252
+      gateway 192.189.2.1
+
+auto eth1
+iface eth1 inet static
+      address 192.189.0.1
+      netmask 255.255.255.0
+```
+**Konfigurasi: The Instrument**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.146.2
+      netmask 255.255.255.252
+      getaway 192.189.146.1
+
+auto eth1
+iface eth1 inet static
+      address 192.189.136.1
+      netmask 255.255.255.128
+
+auto eth2
+iface eth2 inet static
+      address 192.189.136.1
+      netmask 255.255.255.252
+
+auto eth3
+iface eth3 inet static
+      address 192.189.145.1
+      netmask 255.255.255.252
+```
+**Konfigurasi: The Profound**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.145.2
+      netmask 255.255.255.252
+      gateway 192.189.145.1
+
+auto eth1
+iface eth1 inet static
+      address 192.189.144.1
+      netmask 255.255.255.128
+
+auto eth2
+iface eth2 inet static
+      address 192.189.144.129
+      netmask 255.255.255.128
+```
+**Konfigurasi: The Firefist**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.136.2
+      netmask 255.255.255.252
+      gateway 192.189.136.1
+
+auto eth1
+iface eth1 inet static
+      address 198.189.128.1
+      netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+      address 192.189.131.1
+      netmask 255.255.254.0
+```
+**Konfigurasi: The Queen**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 198.189.128.2
+      netmask 255.255.255.0
+      gateway 198.189.128.1
+
+auto eth1
+iface eth1 inet static
+      address 192.189.129.1
+      netmask 255.255.255.252
+```
+
+### CIDR Routing - Setting Host Configuration
+![ClientServerCIDR]()
+**Konfigurasi: Guideau (1000 Host)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.4.2
+      netmask 255.255.252.0
+      gateway 192.189.4.1
+```
+**Konfigurasi: Phanora (150 Host)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.0.2
+      netmask 255.255.255.0
+      gateway 192.189.0.1
+```
+**Konfigurasi: Johan (100 Host)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.0.153
+      netmask 255.255.255.0
+      gateway 192.189.0.1
+```
+**Konfigurasi: Ashaf (50 Host)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.16.2
+      netmask 255.255.255.192
+      gateway 192.189.16.1
+```
+**Konfigurasi: Matt Cugatt (120 Host)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.136.2
+      netmask 255.255.255.128
+      gateway 192.189.136.1
+```
+**Konfigurasi: Keith (210 Host)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.128.2
+      netmask 255.255.255.0
+      gateway 192.189.128.1
+```
+**Konfigurasi: Oakleave (500 Host)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.131.2
+      netmask 255.255.254.0
+      gateway 192.189.131.1
+```
+**Konfigurasi: The Witch (Server)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.129.2
+      netmask 255.255.255.252
+      gateway 192.189.129.2
+```
+**Konfigurasi: The Beast (Server)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.64.2
+      netmask 255.255.255.252
+      gateway 192.189.64.1
+```
+**Konfigurasi: Haines (70 Host)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.192.202
+      netmask 255.255.254.0
+      gateway 192.189.192.1
+```
+**Konfigurasi: Corvekt (200 Host)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.192.2
+      netmask 255.255.254.0
+      gateway 192.189.192.1
+```
+**Konfigurasi: Spendrow (120 Host)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.144.2
+      netmask 255.255.255.128
+      gateway 192.189.144.1
+```
+**Konfigurasi: Helga (70 Host)**\
+```bash
+auto eth0
+iface eth0 inet static
+      address 192.189.144.130
+      netmask 255.255.255.128
+      gateway 192.189.144.129
+```
+
+### CIDR Routing - Routing
+**The Resonance**\
+```bash
+route add -net 192.189.4.0 netmask 255.255.252.0 gw 192.189.32.2        #A1 Guideau
+route add -net 192.189.8.0 netmask 255.255.255.252 gw 192.189.32.2      #A4 The Order
+route add -net 192.189.2.0 netmask 255.255.255.252 gw 192.189.32.2      #A2 The Dauntless
+route add -net 192.189.0.0 netmask 255.255.255.0 gw 192.189.32.2        #A3 Phanora-Johan
+route add -net 192.189.16.0 netmask 255.255.255.192 gw 192.189.32.2     #A5 Ashaf
+route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.146.2   #A9 The Queen
+route add -net 192.189.131.0 netmask 255.255.254.0 gw 192.189.146.2     #A13 Oakleave
+route add -net 192.189.128.0 netmask 255.255.255.0 gw 192.189.146.2     #A8 Keith
+route add -net 192.189.144.128 netmask 255.255.255.128 gw 192.189.146.2 #A17 Helga
+route add -net 192.189.144.0 netmask 255.255.255.128 gw 192.189.146.2   #A16 Spendrow
+route add -net 192.189.145.0 netmask 255.255.255.252 gw 192.189.146.2   #A18 The Instrument
+route add -net 192.189.136.0 netmask 255.255.255.128 gw 192.189.146.2   #A7 Matt Cugat
+route add -net 192.189.192.0 netmask 255.255.254.0 gw 192.189.160.2     #A15 Corvekt
+```
+**The Order**\
+```bash
+route add -net 192.189.4.0 netmask 255.255.252.0 gw 192.189.8.2         #A1 Guideai
+route add -net 192.189.0.0 netmask 255.255.255.0 gw 192.189.8.2         #A3 Phanora-Johan
+route add -net 192.189.2.0 netmask 255.255.255.252 gw 192.189.8.2       #A2 The Dauntless
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.32.1                  #default
+```
+**The Minister**\
+```bash
+route add -net 192.189.0.0 netmask 255.255.255.0 gw 192.189.2.2         #A3 Johan-Phanora
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.8.1                   #default
+```
+**The Dauntless**\
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.2.1                   #default
+```
+**The Magical**\
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.160.1                 #default
+```
+**The Instrument**\
+```bash
+route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.136.2   #A9 The Queen
+route add -net 192.189.131.0 netmask 255.255.254.0 gw 192.189.136.2     #A13 Oakleave
+route add -net 192.189.128.0 netmask 255.255.255.0 gw 192.189.136.2     #A8 Keith
+route add -net 192.189.144.128 netmask 255.255.255.128 gw 192.189.145.2 #A17 Helga
+route add -net 192.189.144.0 netmask 255.255.255.128 gw 192.189.145.2   #A16 Spendrow
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.146.1                 #default
+```
+**The Profound**\
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.145.1                 #default
+```
+**The Firefist**\
+```bash
+route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.128.2   #A9 The Queen
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.136.1                 #default
+```
+**The Queen**\
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.128.1                 #default
+```
+### CIDR Routing - IP Tables The Resonance
+Pada router The Resonance jalankan perintah berikut ini:
+```bash
+  iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 192.189.0.0/15
+```
+### CIDR Routing - Setting resolv.conf
+Pada semua node selain Foosha (termasuk router-router lain), jalankan perintah berikut ini:
+```bash
+  echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
