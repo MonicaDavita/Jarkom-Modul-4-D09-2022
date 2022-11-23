@@ -7,32 +7,35 @@
 | 2 | Alya Shofarizqi Inayah | 5025201113 |
 | 3 | Meisya Salsabila Indrijo Putri | 5025201114 |
 
+## Prefix IP
+192.189.X.X
+
 ## CIDR GNS3
 ### Topologi GNS3
-![topologiCIDR]()
+![topologiCIDR](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/TopologiGNS3.jpeg?raw=true)
 
 ### Topologi Cluster GNS3
-![topologiA]()
-![topologiB]()
-![topologiC]()
-![topologiD]()
-![topologiE]()
-![topologiF]()
-![topologiG]()
-![topologiH]()
+![topologiA](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/ClusterA.png?raw=true)
+![topologiB](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/ClusterB.png?raw=true)
+![topologiC](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/ClusterC.png?raw=true)
+![topologiD](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/ClusterD.png?raw=true)
+![topologiE](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/ClusterE.png?raw=true)
+![topologiF](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/ClusterF.png?raw=true)
+![topologiG](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/ClusterG.png?raw=true)
+![topologiH](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/ClusterH.png?raw=true)
 
 Dari pengelompokan subnet tersebut didapatkan subnet terbesar memiliki 16 bit, sehingga pohon pembagian IP dapat dibuat menjadi sebagai berikut:
 
 ### Pohon IP CIDR
-![pohonIPCIDR]()
+![pohonIPCIDR](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/CIDRTree.png?raw=true)
 
 Setelah didapatkan IP pada setiap subnet paling bawah, maka dicari netmask dan broadcast pada setiap subnet tersebut. Hasilnya sebagai berikut:
 
 ### Tabel Netmask dan Broadcast ID
-![NetmaskBroadcastCIDR]()
+![NetmaskBroadcastCIDR](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/NetIDBroadcastCIDR.jpeg?raw=true)
 
 ### CIDR Routing - Setting Network Configuration
-![NetworkConfigurationCIDR]()
+![NetworkConfigurationCIDR](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/NetworkConfCIDR.jpeg?raw=true)
 **Konfigurasi: The Resonance**\
 ```bash
 auto eth0
@@ -182,7 +185,7 @@ iface eth1 inet static
 ```
 
 ### CIDR Routing - Setting Host Configuration
-![ClientServerCIDR]()
+![ClientServerCIDR](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/ClientServerCIDR.jpeg?raw=true)
 **Konfigurasi: Guideau (1000 Host)**\
 ```bash
 auto eth0
