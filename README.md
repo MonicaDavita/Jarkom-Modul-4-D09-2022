@@ -362,5 +362,5 @@ Pada semua node selain Foosha (termasuk router-router lain), jalankan perintah b
 ```
 
 ### CIDR Routing - Bukti Berhasil Ping
-![Bukti1Ping](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/ClientServerCIDR.jpeg?raw=true)
+![Bukti1Ping](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/Gui-Ph%20PING%20Success.jpeg?raw=true)
 Guideau to Phanora
