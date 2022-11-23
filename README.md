@@ -356,7 +356,7 @@ Pada router The Resonance jalankan perintah berikut ini:
   iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 192.189.0.0/15
 ```
 ### CIDR Routing - Setting resolv.conf
-Pada semua node selain Foosha (termasuk router-router lain), jalankan perintah berikut ini:
+Pada semua node selain The Resonance (termasuk router-router lain), jalankan perintah berikut ini:
 ```bash
   echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
