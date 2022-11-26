@@ -392,4 +392,9 @@ Pada semua node selain The Resonance (termasuk router-router lain), jalankan per
 
 ### CIDR Routing - Bukti Berhasil Ping
 ![Bukti1Ping](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/Gui-Ph%20PING%20Success.jpeg?raw=true)
-Guideau to Phanora
+* Guideau to Phanora
+
+
+## VLSM CPT
+### Topologi CPT
+<img width="960" alt="Screenshot_20221126_212023" src="https://user-images.githubusercontent.com/94627623/204093545-730b940b-ffbf-4357-ad48-a26621995d15.png">
