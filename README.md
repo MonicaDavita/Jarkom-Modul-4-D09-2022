@@ -32,10 +32,10 @@ Dari pengelompokan subnet tersebut didapatkan subnet terbesar memiliki 16 bit, s
 Setelah didapatkan IP pada setiap subnet paling bawah, maka dicari netmask dan broadcast pada setiap subnet tersebut. Hasilnya sebagai berikut:
 
 ### Tabel Netmask dan Broadcast ID
-![NetmaskBroadcastCIDR](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/NetIDBroadcastCIDR.jpeg?raw=true)
+![NetmaskBroadcastCIDR](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/new%20cidr%20ip%20address.jpeg?raw=true)
 
 ### CIDR Routing - Setting Network Configuration
-![NetworkConfigurationCIDR](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/NetworkConfCIDR.jpeg?raw=true)
+![NetworkConfigurationCIDR](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/new%20cidr%20router%20conf.jpeg?raw=true)
 
 **Konfigurasi: The Resonance**
 ```
@@ -130,7 +130,7 @@ iface eth1 inet static
 
 auto eth2
 iface eth2 inet static
-      address 192.189.136.1
+      address 192.189.136.121
       netmask 255.255.255.252
 
 auto eth3
@@ -162,18 +162,18 @@ iface eth2 inet static
 ```
 auto eth0
 iface eth0 inet static
-      address 192.189.136.2
+      address 192.189.136.122
       netmask 255.255.255.252
-      gateway 192.189.136.1
+      gateway 192.189.136.121
 
 auto eth1
 iface eth1 inet static
-      address 198.189.128.1
+      address 192.189.128.1
       netmask 255.255.255.0
 
 auto eth2
 iface eth2 inet static
-      address 192.189.131.1
+      address 192.189.130.1
       netmask 255.255.254.0
 ```
 
@@ -181,9 +181,9 @@ iface eth2 inet static
 ```
 auto eth0
 iface eth0 inet static
-      address 198.189.128.2
+      address 192.189.128.2
       netmask 255.255.255.0
-      gateway 198.189.128.1
+      gateway 192.189.128.1
 
 auto eth1
 iface eth1 inet static
@@ -192,7 +192,7 @@ iface eth1 inet static
 ```
 
 ### CIDR Routing - Setting Host Configuration
-![ClientServerCIDR](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/ClientServerCIDR.jpeg?raw=true)
+![ClientServerCIDR](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/new%20cidr%20client%20conf.jpeg?raw=true)
 
 **Konfigurasi: Guideau (1000 Host)**
 ```
@@ -243,7 +243,7 @@ iface eth0 inet static
 ```
 auto eth0
 iface eth0 inet static
-      address 192.189.128.2
+      address 192.189.128.3
       netmask 255.255.255.0
       gateway 192.189.128.1
 ```
@@ -252,9 +252,9 @@ iface eth0 inet static
 ```
 auto eth0
 iface eth0 inet static
-      address 192.189.131.2
+      address 192.189.130.2
       netmask 255.255.254.0
-      gateway 192.189.131.1
+      gateway 192.189.130.1
 ```
 
 **Konfigurasi: The Witch (Server)**
@@ -263,7 +263,7 @@ auto eth0
 iface eth0 inet static
       address 192.189.129.2
       netmask 255.255.255.252
-      gateway 192.189.129.2
+      gateway 192.189.129.1
 ```
 
 **Konfigurasi: The Beast (Server)**
@@ -318,45 +318,113 @@ route add -net 192.189.8.0 netmask 255.255.255.252 gw 192.189.32.2      #A4 The 
 route add -net 192.189.2.0 netmask 255.255.255.252 gw 192.189.32.2      #A2 The Dauntless
 route add -net 192.189.0.0 netmask 255.255.255.0 gw 192.189.32.2        #A3 Phanora-Johan
 route add -net 192.189.16.0 netmask 255.255.255.192 gw 192.189.32.2     #A5 Ashaf
-route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.146.2   #A9 The Queen
-route add -net 192.189.131.0 netmask 255.255.254.0 gw 192.189.146.2     #A13 Oakleave
+route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.146.2   #A9 The Witch
+route add -net 192.189.130.0 netmask 255.255.254.0 gw 192.189.146.2     #A13 Oakleave
 route add -net 192.189.128.0 netmask 255.255.255.0 gw 192.189.146.2     #A8 Keith
 route add -net 192.189.144.128 netmask 255.255.255.128 gw 192.189.146.2 #A17 Helga
 route add -net 192.189.144.0 netmask 255.255.255.128 gw 192.189.146.2   #A16 Spendrow
-route add -net 192.189.145.0 netmask 255.255.255.252 gw 192.189.146.2   #A18 The Instrument
+route add -net 192.189.145.0 netmask 255.255.255.252 gw 192.189.146.2   #A18 The Profound-Instrument
 route add -net 192.189.136.0 netmask 255.255.255.128 gw 192.189.146.2   #A7 Matt Cugat
-route add -net 192.189.192.0 netmask 255.255.254.0 gw 192.189.160.2     #A15 Corvekt
+route add -net 192.189.192.0 netmask 255.255.254.0 gw 192.189.160.2     #A15 Corvekt-Haines
+route add -net 192.189.136.0 netmask 255.255.255.252 gw 192.189.146.2   #A12 The Firefist-Instrument
 ```
 
 **The Order**
 ```
-route add -net 192.189.4.0 netmask 255.255.252.0 gw 192.189.8.2         #A1 Guideai
+route add -net 192.189.4.0 netmask 255.255.252.0 gw 192.189.8.2         #A1 Guideau
 route add -net 192.189.0.0 netmask 255.255.255.0 gw 192.189.8.2         #A3 Phanora-Johan
 route add -net 192.189.2.0 netmask 255.255.255.252 gw 192.189.8.2       #A2 The Dauntless
+route add -net 192.189.136.0 netmask 255.255.255.128 gw 192.189.32.1    # A7 Matt Cugat
+route add -net 198.189.128.0 netmask 255.255.255.0 gw 192.189.32.1      # A8 Keith
+route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.32.1    # A9 The Witch
+route add -net 192.189.64.0 netmask 255.255.255.252 gw 192.189.32.1     # A10 The Beast
+route add -net 192.189.146.0 netmask 255.255.255.252 gw 192.189.32.1    # A11 The Resonance
+route add -net 192.189.136.0 netmask 255.255.255.252 gw 192.189.32.1    # A12 The Firefist
+route add -net 192.189.130.0 netmask 255.255.254.0 gw 192.189.32.1      # A13 Oakleave
+route add -net 192.189.160.0 netmask 255.255.255.252 gw 192.189.32.1    # A14 The Magical
+route add -net 192.189.192.0 netmask 255.255.254.0 gw 192.189.32.1      # A15 Corvekt-Haines
+route add -net 192.189.144.0 netmask 255.255.255.128 gw 192.189.32.1    # A16 Spendrow
+route add -net 192.189.144.128 netmask 255.255.255.128 gw 192.189.32.1  # A17 Helga
+route add -net 192.189.145.0 netmask 255.255.255.252 gw 192.189.32.1    # A18 The Profound
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.32.1                  #default
 ```
 
 **The Minister**
 ```
 route add -net 192.189.0.0 netmask 255.255.255.0 gw 192.189.2.2         #A3 Johan-Phanora
+route add -net 192.189.16.0 netmask 255.255.255.192 gw 192.189.8.1      # A5 Ashaf
+route add -net 192.189.32.0 netmask 255.255.255.252 gw 192.189.8.1      # A6 The Order-Resonance
+route add -net 192.189.136.0 netmask 255.255.255.128 gw 192.189.8.1     # A7 Matt Cugat
+route add -net 198.189.128.0 netmask 255.255.255.0 gw 192.189.8.1       # A8 Keith
+route add -net 192.189.129.0 netmask 255.255.255.252 gw  192.189.8.1    # A9 The Witch
+route add -net 192.189.64.0 netmask 255.255.255.252 gw 192.189.8.1      # A10 The Beast
+route add -net 192.189.146.0 netmask 255.255.255.252 gw 192.189.8.1     # A11 The Instrument-Resonance
+route add -net 192.189.136.0 netmask 255.255.255.252 gw 192.189.8.1     # A12 The Instrument-Firefist
+route add -net 192.189.130.0 netmask 255.255.254.0 gw 192.189.8.1       # A13 Oakleave
+route add -net 192.189.160.0 netmask 255.255.255.252 gw 192.189.8.1     # A14 The Magical
+route add -net 192.189.192.0 netmask 255.255.254.0 gw 192.189.8.1       # A15 Corvekt-Haines
+route add -net 192.189.144.0 netmask 255.255.255.128 gw 192.189.8.1     # A16 Spendrow
+route add -net 192.189.144.128 netmask 255.255.255.128 gw 192.189.8.1   # A17 Helga
+route add -net 192.189.145.0 netmask 255.255.255.252 gw 192.189.8.1     # A18 The Profound
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.8.1                   #default
 ```
 
 **The Dauntless**
 ```
+route add -net 192.189.4.0 netmask 255.255.252.0 gw 192.189.2.1         # A1 Guideau
+route add -net 192.189.8.0 netmask 255.255.255.252 gw 192.189.2.1       # A4 The Minister-Order
+route add -net 192.189.16.0 netmask 255.255.255.192 gw 192.189.2.1      # A5 Ashaf
+route add -net 192.189.32.0 netmask 255.255.255.252 gw 192.189.2.1      # A6 The Order-Resonance
+route add -net 192.189.136.0 netmask 255.255.255.128 gw 192.189.2.1     # A7 Matt Cugat
+route add -net 198.189.128.0 netmask 255.255.255.0 gw 192.189.2.1       # A8 Keith
+route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.2.1     # A9 The Witch
+route add -net 192.189.64.0 netmask 255.255.255.252 gw 192.189.2.1      # A10 The Beast
+route add -net 192.189.146.0 netmask 255.255.255.252 gw 192.189.2.1     # A11 The Resonance-Instrument
+route add -net 192.189.136.0 netmask 255.255.255.252 gw 192.189.2.1     # A12 The Instrument-Firefist
+route add -net 192.189.130.0 netmask 255.255.254.0 gw 192.189.2.1       # A13 Oakleave
+route add -net 192.189.160.0 netmask 255.255.255.252 gw 192.189.2.1     # A14 The Magical
+route add -net 192.189.192.0 netmask 255.255.254.0 gw 192.189.2.1       # A15 Corvekt-Haines
+route add -net 192.189.144.0 netmask 255.255.255.128 gw 192.189.2.1     # A16 Spendrow
+route add -net 192.189.144.128 netmask 255.255.255.128 gw 192.189.2.1   # A17 Helga
+route add -net 192.189.145.0 netmask 255.255.255.252 gw 192.189.2.1     # A18 The Profound
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.2.1                   #default
 ```
 
 **The Magical**
 ```
+route add -net 192.189.4.0 netmask 255.255.252.0 gw 192.189.160.1       # A1 Guideau
+route add -net 192.189.2.0 netmask 255.255.255.252 gw 192.189.160.1     # A2 The Minister-Dauntless
+route add -net 192.189.0.0 netmask 255.255.255.0 gw 192.189.160.1       # A3 Johan-Phanora
+route add -net 192.189.8.0 netmask 255.255.255.252 gw 192.189.160.1     # A4 The Minister-Order
+route add -net 192.189.16.0 netmask 255.255.255.192 gw 192.189.160.1    # A5 Ashaf
+route add -net 192.189.32.0 netmask 255.255.255.252 gw 192.189.160.1    # A6 The Order-Resonance
+route add -net 192.189.136.0 netmask 255.255.255.128 gw 192.189.160.1   # A7 Matt Cugat
+route add -net 198.189.128.0 netmask 255.255.255.0 gw 192.189.160.1     # A8 Keith
+route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.160.1   # A9 The Witch
+route add -net 192.189.64.0 netmask 255.255.255.252 gw 192.189.160.1    # A10 The Beast
+route add -net 192.189.146.0 netmask 255.255.255.252 gw 192.189.160.1   # A11 The Instrument-Resonance
+route add -net 192.189.136.0 netmask 255.255.255.252 gw 192.189.160.1   # A12 The Instrument-Firefist
+route add -net 192.189.130.0 netmask 255.255.254.0 gw 192.189.160.1     # A13 Oakleave
+route add -net 192.189.144.0 netmask 255.255.255.128 gw 192.189.160.1   # A16 Spendrow
+route add -net 192.189.144.128 netmask 255.255.255.128 gw 192.189.160.1 # A17 Helga
+route add -net 192.189.145.0 netmask 255.255.255.252 gw 192.189.160.1   # A18 The Profound
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.160.1                 #default
 ```
 
 **The Instrument**
 ```
-route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.136.2   #A9 The Queen
-route add -net 192.189.131.0 netmask 255.255.254.0 gw 192.189.136.2     #A13 Oakleave
-route add -net 192.189.128.0 netmask 255.255.255.0 gw 192.189.136.2     #A8 Keith
+route add -net 192.189.4.0 netmask 255.255.252.0 gw 192.189.146.1       #A1 Guideau
+route add -net 192.189.2.0 netmask 255.255.255.252 gw 192.189.146.1     #A2 The Minister-Dauntless
+route add -net 192.189.0.0 netmask 255.255.255.0 gw 192.189.146.1       #A3 Johan-Phanora
+route add -net 192.189.8.0 netmask 255.255.255.252 gw 192.189.146.1     #A4 The Minister-Order
+route add -net 192.189.16.0 netmask 255.255.255.192 gw 192.189.146.1    #A5 Ashaf
+route add -net 192.189.32.0 netmask 255.255.255.252 gw 192.189.146.1    #A6 The Order-Resonance
+route add -net 192.189.64.0 netmask 255.255.255.252 gw 192.189.146.1    #A10 The Beast
+route add -net 192.189.160.0 netmask 255.255.255.252 gw 192.189.146.1   #A14 The Magical
+route add -net 192.189.192.0 netmask 255.255.254.0 gw 192.189.146.1     #A15 Corvekt-Haines
+route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.136.122 #A9 The Witch
+route add -net 192.189.130.0 netmask 255.255.254.0 gw 192.189.136.122   #A13 Oakleave
+route add -net 192.189.128.0 netmask 255.255.255.0 gw 192.189.136.122   #A8 Keith
 route add -net 192.189.144.128 netmask 255.255.255.128 gw 192.189.145.2 #A17 Helga
 route add -net 192.189.144.0 netmask 255.255.255.128 gw 192.189.145.2   #A16 Spendrow
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.146.1                 #default
@@ -364,17 +432,62 @@ route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.146.1                 #default
 
 **The Profound**
 ```
+route add -net 192.189.4.0 netmask 255.255.252.0 gw 192.189.145.1       #A1 Guideau
+route add -net 192.189.2.0 netmask 255.255.255.252 gw 192.189.145.1     #A2 The Minister-Dauntless
+route add -net 192.189.0.0 netmask 255.255.255.0 gw 192.189.145.1       #A3 Johan-Phanora
+route add -net 192.189.8.0 netmask 255.255.255.252 gw 192.189.145.1     #A4 The Minister-Order
+route add -net 192.189.16.0 netmask 255.255.255.192 gw 192.189.145.1    #A5 Ashaf
+route add -net 192.189.32.0 netmask 255.255.255.252 gw 192.189.145.1    #A6 The Order-Resonance
+route add -net 192.189.136.0 netmask 255.255.255.128 gw 192.189.145.1   #A7 Matt Cugat
+route add -net 198.189.128.0 netmask 255.255.255.0 gw 192.189.145.1     #A8 Keith
+route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.145.1   #A9 The Witch
+route add -net 192.189.64.0 netmask 255.255.255.252 gw 192.189.145.1    #A10 Th Beast
+route add -net 192.189.146.0 netmask 255.255.255.252 gw 192.189.145.1   #A11 The Instrument-Resonance
+route add -net 192.189.136.0 netmask 255.255.255.252 gw 192.189.145.1   #A12 Th Instrument-Firefist
+route add -net 192.189.130.0 netmask 255.255.254.0 gw 192.189.145.1     #A13 Oakleave
+route add -net 192.189.160.0 netmask 255.255.255.252 gw 192.189.145.1   #A14 The Resonance-Magical
+route add -net 192.189.192.0 netmask 255.255.254.0 gw 192.189.145.1     #A15 Corvekt-Haines
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.145.1                 #default
 ```
 
 **The Firefist**
 ```
-route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.128.2   #A9 The Queen
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.136.1                 #default
+route add -net 192.189.136.0 netmask 255.255.255.128 gw 192.189.136.121       #A7 Matt Cugat
+route add -net 192.189.144.128 netmask 255.255.255.128 gw 192.189.136.121     #A17 Helga
+route add -net 192.189.144.0 netmask 255.255.255.128 gw 192.189.136.121       #A16 Spendrow
+route add -net 192.189.145.0 netmask 255.255.255.252 gw 192.189.136.121       #A18 The Instrument-Profound
+route add -net 192.189.146.0 netmask 255.255.255.252 gw 192.189.136.121       #A11 The Instrument-Resonance
+route add -net 192.189.0.0 netmask 255.255.255.0 gw 192.189.136.121           #A3 Johan-Phanora
+route add -net 192.189.2.0 netmask 255.255.255.252 gw 192.189.136.121         #A2 The Minister-Dauntless
+route add -net 192.189.4.0 netmask 255.255.252.0 gw 192.189.136.121           #A1 Guideau
+route add -net 192.189.8.0 netmask 255.255.255.252 gw 192.189.136.121         #A4 The Minister-Order
+route add -net 192.189.16.0 netmask 255.255.255.192 gw 192.189.136.121        #A5 Ashaf
+route add -net 192.189.32.0 netmask 255.255.255.252 gw 192.189.136.121        #A6 The Order-Resonance
+route add -net 192.189.64.0 netmask 255.255.255.252 gw 192.189.136.121        #A10 The Beast
+route add -net 192.189.160.0 netmask 255.255.255.252 gw 192.189.136.121       #A14 The Magical-Resonance
+route add -net 192.189.192.0 netmask 255.255.254.0 gw 192.189.136.121         #A15 Corvekt-Haines
+route add -net 192.189.129.0 netmask 255.255.255.252 gw 192.189.128.2         #A9 The Witch
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.136.121
 ```
 
 **The Queen**
 ```
+route add -net 192.189.4.0 netmask 255.255.252.0  gw 192.189.128.1      #A1 Guideau
+route add -net 192.189.2.0 netmask 255.255.255.252 gw 192.189.128.1     #A2 The Minister-Dauntless
+route add -net 192.189.0.0 netmask 255.255.255.0 gw 192.189.128.1       #A3 Johan-Phanora
+route add -net 192.189.8.0 netmask 255.255.255.252 gw 192.189.128.1     #A4 The Minister-Order
+route add -net 192.189.16.0 netmask 255.255.255.192 gw 192.189.128.1    #A5 Ashaf
+route add -net 192.189.32.0 netmask 255.255.255.252 gw 192.189.128.1    #A6 The Order-Resonance
+route add -net 192.189.136.0 netmask 255.255.255.128 gw 192.189.128.1   #A7 Matt Cugat
+route add -net 192.189.64.0 netmask 255.255.255.252 gw 192.189.128.1    #A10 The Beast
+route add -net 192.189.146.0 netmask 255.255.255.252 gw 192.189.128.1   #A11 The Instrument-Resonance
+route add -net 192.189.136.0 netmask 255.255.255.252 gw 192.189.128.1   #A12 The Instrument-Firefist
+route add -net 192.189.130.0 netmask 255.255.254.0 gw 192.189.128.1     #A13 Oakleave
+route add -net 192.189.160.0 netmask 255.255.255.252 gw 192.189.128.1   #A14 The Magical-Resonance
+route add -net 192.189.192.0 netmask 255.255.254.0 gw 192.189.128.1     #A15 Corvekt-Haines
+route add -net 192.189.144.0 netmask 255.255.255.128 gw 192.189.128.1   #A16 Spendrow
+route add -net 192.189.144.128 netmask 255.255.255.128 gw 192.189.128.1 #A17 Helga
+route add -net 192.189.145.0 netmask 255.255.255.252 gw 192.189.128.1   #A18 The Profound
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.189.128.1                 #default
 ```
 
@@ -398,3 +511,13 @@ Pada semua node selain The Resonance (termasuk router-router lain), jalankan per
 ## VLSM CPT
 ### Topologi CPT
 <img width="960" alt="Screenshot_20221126_212023" src="https://user-images.githubusercontent.com/94627623/204093545-730b940b-ffbf-4357-ad48-a26621995d15.png">
+
+### Pohon IP VLSM
+![pohonIPVLSM](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetVLSM/newTreeVLSM.png?raw=true)
+
+Setelah didapatkan IP pada setiap subnet paling bawah, maka dicari netmask dan broadcast pada setiap subnet tersebut. Hasilnya sebagai berikut:
+### Tabel Netmask dan Broadcast ID
+![NetmaskBroadcastVLSM](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetVLSM/new%20vlsm%20ip%20address.jpeg?raw=true)
+
+### VLSM Routing - Setting Network Configuration
+![NetworkConfigurationVLSM](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetVLSM/new%20vlsm%20router%20conf.jpeg?raw=true)
