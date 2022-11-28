@@ -507,6 +507,8 @@ Pada semua node selain The Resonance (termasuk router-router lain), jalankan per
 ![Bukti1Ping](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetCIDR/Gui-Ph%20PING%20Success.jpeg?raw=true)
 * Guideau to Phanora
 
+### File GNS3
+File konfigurasi dan routing GNS3 ada pada: [Click Here](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/Modul-4-D09-CIDR.gns3project)
 
 ## VLSM CPT
 ### Topologi CPT
@@ -524,3 +526,6 @@ Setelah didapatkan IP pada setiap subnet paling bawah, maka dicari netmask dan b
 
 ### VLSM Routing - Setting Network Configuration
 ![NetworkConfigurationVLSM](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/blob/main/AsetVLSM/new%20vlsm%20router%20conf.jpeg?raw=true)
+
+### Konfigurssi IP CPT & Routing
+Ada pada file berikut: [Click Here](https://github.com/MonicaDavita/Jarkom-Modul-4-D09-2022/tree/main/VLSM)
